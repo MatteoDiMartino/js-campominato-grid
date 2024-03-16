@@ -25,6 +25,10 @@ btn.addEventListener('click', function() {
         contentSpan.classList.add('inside-box')
         contentSpan.innerHTML = i;
         grid.append(contentSpan);
+
+        contentSpan.addEventListener ('click', function() {
+            contentSpan.classList.add('bg-danger');
+        })
     }
 })
 
