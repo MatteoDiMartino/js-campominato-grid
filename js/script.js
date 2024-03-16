@@ -29,6 +29,15 @@ btn.addEventListener('click', function() {
 })
 
 
+let reset = document.querySelector('#resBtn');
+console.log (reset);
+
+reset.addEventListener('click', function () {
+    let spanList = document.querySelectorAll('.inside-box');
+    for (let i = 0; i < spanList.length; i++) {
+        grid.removeChild(spanList[i]);
+    }
+})
 
 
 
