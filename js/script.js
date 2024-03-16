@@ -3,10 +3,78 @@
 // Ci saranno quindi 10 caselle per ognuna delle 10 righe.
 // Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
 
-// seleziono il bottone a cui aggiungerò l'evento e la seguente funzione
+// creo bottone e base griglia
+// creo dei box che verranno generati con il ciclo per creare nel concreto delle celle
 
-const generateButton = document.querySelector('#genBtn');
-console.log(generateButton);
-generateButton.addEventListener('click', function() {
-    alert('test')
+
+// seleziono la griglia
+    // seleziono il bottone che tramite click creerà le celle
+        // dopo averlo selezionato e aver creato la funzione, gli inserisco un ciclo che genera tutte 100 celle
+            // creo la variabile che identifica lo span 
+                // quindi creerò degli span con la classe rispettiva ed il valore valore I progressivo del ciclo al suo interno
+                    // e butterò tutto all'interno del div con l'id della griglia
+                        // ovvero il valore I 
+
+let grid =  document.querySelector('#msBox');
+
+let btn = document.querySelector('#genBtn');
+btn.addEventListener('click', function() {
+    for (let i = 1; i < 101; i++) {
+        let contentSpan = document.createElement('span');
+        console.log(contentSpan);
+        contentSpan.classList.add('inside-box')
+        contentSpan.innerHTML = i;
+        grid.append(contentSpan);
+    }
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let grid = document.querySelector('#msBox');
+// console.log (grid);
+
+// const generateButton = document.querySelector('#genBtn');
+// console.log(generateButton);
+// generateButton.addEventListener('click', function() {
+//     for (let i = 1; i < 101; i++){
+//         let square = document.createElement ('span')
+//         console.log(square)
+//         square.classList.add('inside-box');
+//         let value;
+//         console.log (value)
+
+//         square = value[i];
+//         console.log(square)
+//     }
+// })
+
