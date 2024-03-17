@@ -27,7 +27,7 @@ btn.addEventListener('click', function() {
         grid.append(contentSpan);
 
         contentSpan.addEventListener ('click', function() {
-            contentSpan.classList.add('bg-danger');
+            contentSpan.classList.add('bg-info');
             console.log(contentSpan);
         })
     }
