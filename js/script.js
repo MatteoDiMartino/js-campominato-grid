@@ -28,13 +28,14 @@ btn.addEventListener('click', function() {
 
         contentSpan.addEventListener ('click', function() {
             contentSpan.classList.add('bg-danger');
+            console.log(contentSpan);
         })
     }
 })
-
-
 let reset = document.querySelector('#resBtn');
 console.log (reset);
+
+// rimuovi elementi con classe inside box ed i rispettivi figli
 
 reset.addEventListener('click', function () {
     let spanList = document.querySelectorAll('.inside-box');
@@ -60,34 +61,4 @@ reset.addEventListener('click', function () {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let grid = document.querySelector('#msBox');
-// console.log (grid);
-
-// const generateButton = document.querySelector('#genBtn');
-// console.log(generateButton);
-// generateButton.addEventListener('click', function() {
-//     for (let i = 1; i < 101; i++){
-//         let square = document.createElement ('span')
-//         console.log(square)
-//         square.classList.add('inside-box');
-//         let value;
-//         console.log (value)
-
-//         square = value[i];
-//         console.log(square)
-//     }
-// })
 
