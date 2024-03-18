@@ -17,38 +17,71 @@
 
 let grid =  document.querySelector('#msBox');
 
+
+
+
 let btn = document.querySelector('#genBtn');
 btn.addEventListener('click', function() {
-    for (let i = 1; i < 101; i++) {
-        let contentSpan = document.createElement('span');
-        console.log(contentSpan);
-        contentSpan.classList.add('inside-box')
-        contentSpan.innerHTML = i;
-        grid.append(contentSpan);
+    // for (let i = 1; i < 101; i++) {
+    //     let difficult = document.querySelector('#selDif');
+    //     console.log(difficult);
 
-        contentSpan.addEventListener ('click', function() {
-            contentSpan.classList.add('bg-info');
+
+
+    //     contentSpan.addEventListener ('click', function() {
+    //         contentSpan.classList.add('bg-info');
+    //         console.log(contentSpan);
+    //     })
+    // }
+    let difficult = document.querySelector('#selDif');
+    console.log(difficult);
+    
+    let valoreSel = difficult.value;
+    console.log(valoreSel);
+    
+    let vs1 = document.querySelector('#sele1');
+    let vs2 = document.querySelector('#sele2');
+    let vs3 = document.querySelector('#sele3');
+    
+    if (valoreSel === vs1.value) {
+        alert('e co la prima ce stai')
+        for (let i = 1; i < 101; i++) {
+            let contentSpan = document.createElement('span');
             console.log(contentSpan);
-        })
+            contentSpan.classList.add('inside-box')
+            contentSpan.innerHTML = i;
+            grid.append(contentSpan);
+        }
+    } else if (valoreSel === vs2.value) {
+        alert('Daje npo');
+    } else {
+        alert('piango');
     }
-})
-let reset = document.querySelector('#resBtn');
-console.log (reset);
 
-// rimuovi elementi con classe inside box ed i rispettivi figli
-
-reset.addEventListener('click', function () {
-    let spanList = document.querySelectorAll('.inside-box');
-    for (let i = 0; i < spanList.length; i++) {
-        grid.removeChild(spanList[i]);
-    }
 })
 
 
 
+// let reset = document.querySelector('#resBtn');
+// console.log (reset);
 
+// // rimuovi elementi con classe inside box ed i rispettivi figli
 
+// reset.addEventListener('click', function () {
+//     let spanList = document.querySelectorAll('.inside-box');
+//     for (let i = 0; i < spanList.length; i++) {
+//         grid.removeChild(spanList[i]);
+//     }
+// })
 
+// Seleziona difficoltà
+// se dentro select l'utente clicca seguente opzione cambierà quindi il
+// risultato di ciò che verrà generato dal bottone genera griglia
+
+// se l'utente imposta difficoltà 2 la griglia arriverà fino ad 81
+// altrimenti se l'utente imposta difficoltà 3 la griglia arriverà fino ad 49
+
+// creo variabile dove seleziono select
 
 
 
