@@ -22,17 +22,6 @@ let grid =  document.querySelector('#msBox');
 
 let btn = document.querySelector('#genBtn');
 btn.addEventListener('click', function() {
-    // for (let i = 1; i < 101; i++) {
-    //     let difficult = document.querySelector('#selDif');
-    //     console.log(difficult);
-
-
-
-    //     contentSpan.addEventListener ('click', function() {
-    //         contentSpan.classList.add('bg-info');
-    //         console.log(contentSpan);
-    //     })
-    // }
     let difficult = document.querySelector('#selDif');
     console.log(difficult);
     
@@ -54,25 +43,25 @@ btn.addEventListener('click', function() {
         }
     } else if (valoreSel === vs2.value) {
         alert('Daje npo');
+        for (let i = 1; i < 82; i++) {
+            let contentSpan = document.createElement('span');
+            console.log(contentSpan);
+            contentSpan.classList.add('inside-box')
+            contentSpan.innerHTML = i;
+            grid.append(contentSpan);
+        }
     } else {
         alert('piango');
+        for (let i = 1; i < 50; i++) {
+            let contentSpan = document.createElement('span');
+            console.log(contentSpan);
+            contentSpan.classList.add('inside-box')
+            contentSpan.innerHTML = i;
+            grid.append(contentSpan);
+        }
     }
 
 })
-
-
-
-// let reset = document.querySelector('#resBtn');
-// console.log (reset);
-
-// // rimuovi elementi con classe inside box ed i rispettivi figli
-
-// reset.addEventListener('click', function () {
-//     let spanList = document.querySelectorAll('.inside-box');
-//     for (let i = 0; i < spanList.length; i++) {
-//         grid.removeChild(spanList[i]);
-//     }
-// })
 
 // Seleziona difficoltà
 // se dentro select l'utente clicca seguente opzione cambierà quindi il
