@@ -17,9 +17,6 @@
 
 let grid =  document.querySelector('#msBox');
 
-
-
-
 let btn = document.querySelector('#genBtn');
 btn.addEventListener('click', function() {
     let difficult = document.querySelector('#selDif');
